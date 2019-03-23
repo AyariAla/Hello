@@ -1,0 +1,65 @@
+<html>
+<head><script type="text/javascript" src="{{ asset('js/jquery.js') }}" ></script>
+    <script>
+        $(document).ready(function(){
+            alert("Script working properly !");
+            $('#voiture').hide();
+
+            $('#para').mouseenter(function () {
+                $('#para').hide();
+                //$('#voiture').show();
+                $('#zone').html('<img src="{{ asset('img/logo.png') }}"');
+            });
+            $('#para').mouseout(function () {
+                $('#para').show();
+                $('#voiture').hide();
+            });
+
+            $('#bt1').click(function () {
+                $('table').hide();
+            });
+
+            $('#bt2').click(function () {
+                $('table').show();
+            });
+            $('#bt3').click(function () {
+                $('table').toggle();
+            });
+        });
+
+
+
+    </script>
+</head>
+<h2>La liste des modeles </h2>
+<p id="para">Afficher logo voiture</p>
+<div id="zone"></div>
+<table border="1">
+    <tr>
+        <td>Libellés</td>
+        <td>Pays</td>
+        <td>Suppression</td>
+        <td>Modification</td>
+    </tr>
+    <tr>
+        {% for i in m %}
+
+        <td>{{ i.libelle }}</td>
+        <td>{{ i.pays }}</td>
+        <td><a href={{ path('supprimerM',{'id':i.id})}}>Supprimer</a> </td>
+        <td><a href={{ path('modifierM',{'id':i.id})}}>Modifier</a> </td>
+
+
+    </tr>
+
+    {% endfor %}
+</table>
+
+<a href={{ path('rechercherFormulaire') }}>Recherche</a>
+<button id="bt1"> Cacher</button><button id="bt2"> Afficher</button><button id="bt3"> Toggle </button>
+
+
+</html>
+
+
+

@@ -1,0 +1,51 @@
+esprit_parc_homepage:
+    path:     /
+    defaults: { _controller: EspritParcBundle:Default:index }
+
+demo_test2:
+    path:     /afficher/{marque}
+    defaults: { _controller: EspritParcBundle:Voiture:Affichage }
+
+esprit_parc_liste:
+    path:     /list
+    defaults: { _controller: EspritParcBundle:Voiture:List }
+
+afficheM:
+    path:     /afficher
+    defaults: { _controller: EspritParcBundle:Modele:afficheM }
+
+supprimerM:
+    path:     /supprimer/{id}
+    defaults: { _controller: EspritParcBundle:Modele:supprimerM }
+
+ajouterM:
+    path:     /ajouterM
+    defaults: { _controller: EspritParcBundle:Modele:ajouterM }
+
+ajouterMG:
+    path:     /ajouterMG
+    defaults: { _controller: EspritParcBundle:Modele:ajouterMG }
+
+modifierM:
+    path:     /modifierM/{id}
+    defaults: { _controller: EspritParcBundle:Modele:modifierM }
+
+rechercherFormulaire:
+    path:     /rechercherFormulaire
+    defaults: { _controller: EspritParcBundle:Modele:rechercherFormulaire }
+
+rechercherM:
+    path:     /rechercherM
+    defaults: { _controller: EspritParcBundle:Modele:rechercherM }
+
+ajouterVoitureG:
+    path:     /ajouterVoitureG
+    defaults: { _controller: EspritParcBundle:Voiture:AjoutVoitureG }
+
+afficheV:
+    path:     /afficheV
+    defaults: { _controller: EspritParcBundle:Voiture:afficheV }
+
+rechercherVoiture:
+    path:     /rechercherVoiture
+    defaults: { _controller: EspritParcBundle:Voiture:rechercherVoiture }

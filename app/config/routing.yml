@@ -1,0 +1,11 @@
+esprit_parc:
+    resource: "@EspritParcBundle/Resources/config/routing.yml"
+    prefix:   /Parc
+
+demo_test:
+    resource: "@DemoTestBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

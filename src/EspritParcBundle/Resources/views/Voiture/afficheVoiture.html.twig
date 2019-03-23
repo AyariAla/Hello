@@ -1,0 +1,25 @@
+
+
+
+<h2>La liste des Voitures </h2>
+<table border="1">
+<tr>
+    <td>Serie</td>
+    <td>Date Mise Circulation</td>
+    <td>modele</td>
+</tr>
+<tr>
+    {% for i in m %}
+
+    <td>{{ i.serie }}</td>
+    <td>{{ i.DateMiseCirculationtype | date}}</td>
+    <td>{{ i.modele.libelle }}</td>
+
+
+
+</tr>
+
+{% endfor %}
+</table>
+<a href={{ path('rechercherVoiture') }}>Recherche</a>
+

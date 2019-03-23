@@ -1,0 +1,9 @@
+demo_test_homepage:
+    path:     /index
+    defaults: { _controller: DemoTestBundle:Default:index }
+
+demo_test1:
+    path:     /affiche/{id}
+    defaults: { _controller: DemoTestBundle:Etudiant:Affichage }
+
+
